@@ -226,31 +226,29 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
-      <p>{{ email }}</p>
+      <!-- <p>{{ email }}</p>
       <p>Ten: {{ info.name }}</p>
       <p>Gioi tinh: {{ info.gender }}</p>
-      <p>SDT: {{ info.sdt }}</p>
+      <p>SDT: {{ info.sdt }}</p> -->
       <p>Congratulations! Your app is running. 🎉</p>
-      <h1 (mouseover)="countClick2()">Count: {{ count }} </h1>
-      <button (click)="countClick()">Click</button>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Tên</th>
-            <th>Giới tính</th>
-            <th>SĐT</th>
-          </tr>
-        </thead>
-        <tbody>
-          @for(user of list; track user.name) {
-            <tr>
-              <td>{{ user.name }}</td>
-              <td>{{ user.gender }}</td>
-              <td>{{ user.sdt }}</td>
-            </tr>
-          }
-        </tbody>
-      </table>
+      
+      <ul>
+        <!-- sử dụng routerLink thay cho href -->
+        <!-- import RouterLink ở bên 
+        app.component.ts để có thể sử dụng -->
+        <li><a routerLink="">Home</a></li>
+        <li><a routerLink="/list">List</a></li>
+        <li><a routerLink="/create">Create</a></li>
+        <!-- <li><a href="">Home</a></li>
+        <li><a href="/list">List</a></li>
+        <li><a href="/create">Create</a></li> -->
+      </ul>
+      <!-- Data binding 2 chiều -->
+      <label for="">Username</label>
+      <input type="text" [(ngModel)]="name">
+      <p>{{name}}</p>
+      <!-- <h1 (mouseover)="countClick2()">Count: {{ count }} </h1>
+      <button (click)="countClick()">Click</button> -->
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">

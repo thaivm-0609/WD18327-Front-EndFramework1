@@ -1,10 +1,11 @@
 import { Component } from '@angular/core'; //nhúng thư viện
-import { RouterOutlet } from '@angular/router'; //nhúng thư viện
+import { FormsModule } from '@angular/forms';
+import { RouterLink, RouterOutlet } from '@angular/router'; //nhúng thư viện
 
 @Component({
   selector: 'app-root', //meta-data
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FormsModule, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -31,27 +32,5 @@ export class AppComponent {
     gender: 'male',
     sdt: '0123456789',
   }
-
-  list = [
-    {
-      name: 'thaivm2',
-      gender: 'male',
-      sdt: '0123456789',
-    },
-    {
-      name: 'thaivm3',
-      gender: 'female',
-      sdt: '0123456789',
-    },
-    {
-      name: 'thaivm4',
-      gender: 'female',
-      sdt: '0123456789',
-    },
-    {
-      name: 'thaivm4',
-      gender: 'female',
-      sdt: '0123456789',
-    }
-  ]
+  name = 'thaivm2';
 }

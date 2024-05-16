@@ -1,0 +1,26 @@
+<table class="table table-striped container">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tên</th>
+        <th>Giới tính</th>
+        <th>SĐT</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(user of list; track user.name) {
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.gender }}</td>
+            <td>{{ user.sdt }}</td>
+            <td>
+                <button><a [routerLink]="['/detail',user.id]">Detail</a></button>
+                <button><a href="">Edit</a></button>
+                <button><a href="">Delete</a></button>
+            </td>
+        </tr>
+      }
+    </tbody>
+</table>
