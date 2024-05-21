@@ -15,22 +15,22 @@ export const routes: Routes = [
         component: ListComponent,
         title: 'List',
         //guardType: [tenGuard]
-        canActivate: [canActivateGuard] //kiểm tra có được truy cập route hay ko?
+        // canActivate: [canActivateGuard] //kiểm tra có được truy cập route hay ko?
     },
     {
         path: 'create',
         component: CreateComponent,
         title: 'Create',
-        canDeactivate: [deactivateGuard] //kiểm tra xem ng dùng có được rời khỏi route hay ko?
+        // canDeactivate: [deactivateGuard] //kiểm tra xem ng dùng có được rời khỏi route hay ko?
     },
     {
-        path: 'detail/:tenParam',
+        path: 'detail/:project',
         component: DetailComponent,
         title: 'Detail',
     },
     {
         path: 'admin',
-        canActivateChild: [childGuard],
+        // canActivateChild: [childGuard],
         children: [
             {
                 path: 'dashboard',
