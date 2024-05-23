@@ -29,6 +29,10 @@ export const routes: Routes = [
         title: 'Detail',
     },
     {
+        path: 'edit/:project',
+        component: EditComponent,
+    },
+    {
         path: 'admin',
         // canActivateChild: [childGuard],
         children: [

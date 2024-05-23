@@ -20,7 +20,7 @@
             <td>
                 <!-- điều hướng sang trang chi tiết -->
                 <a class="btn btn-info" [routerLink]="['/detail',p.id]">Detail</a>
-                <a class="btn btn-warning mx-2">Edit</a>
+                <a class="btn btn-warning mx-2" [routerLink]="['/edit',p.id]">Edit</a>
                 <a class="btn btn-danger" (click)="onDelete(p.id)">Delete</a>
             </td>
         </tr>
