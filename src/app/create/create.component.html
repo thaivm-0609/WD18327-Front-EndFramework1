@@ -6,7 +6,30 @@
     <form #create="ngForm" (ngSubmit)="onCreate(create.value)">
         <div>
             <label for="" class="form-label">Name</label>
-            <input type="text" class="form-control" name="name" ngModel>
+            <input 
+                type="text"     
+                class="form-control" 
+                name="name"
+                #errName="ngModel"
+                ngModel 
+                required
+                minlength="3"
+            >
+            <p *ngIf="errName.invalid && errName.dirty"
+                class="text-danger"
+            >
+                Dữ liệu không hợp lệ 
+            </p>
+            <p *ngIf="errName.errors?.['required'] && errName.dirty"
+                class="text-danger"
+            >
+                Tên không được bỏ trống
+            </p>
+            <p *ngIf="errName.errors?.['minlength'] && errName.dirty"
+                class="text-danger"
+            >
+                Tên không được ngắn hơn 3 ký tự
+            </p>
             <!-- khai báo name="" và ngModel cho các ô input -->
         </div>
         <div>
