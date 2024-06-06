@@ -8,8 +8,18 @@ import { EditComponent } from './edit/edit.component';
 import { canActivateGuard } from './can-activate.guard';
 import { childGuard } from './child.guard';
 import { deactivateGuard } from './deactivate.guard';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
+    {
+        path: 'register',
+        component: RegisterComponent,
+    },
+    {
+        path: 'login',
+        component: LoginComponent,
+    },
     {
         path: 'list',
         component: ListComponent,
