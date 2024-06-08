@@ -25,7 +25,7 @@ export const routes: Routes = [
         component: ListComponent,
         title: 'List',
         //guardType: [tenGuard]
-        // canActivate: [canActivateGuard] //kiểm tra có được truy cập route hay ko?
+        canActivate: [canActivateGuard] //kiểm tra có được truy cập route hay ko?
     },
     {
         path: 'create',

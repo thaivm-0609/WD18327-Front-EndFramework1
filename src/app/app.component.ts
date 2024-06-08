@@ -33,4 +33,11 @@ export class AppComponent {
     sdt: '0123456789',
   }
   name = 'thaivm2';
+
+  logout(): void {
+    const user = localStorage.getItem('user');
+    if (user !== null) {
+      localStorage.removeItem('user');
+    }
+  }
 }
